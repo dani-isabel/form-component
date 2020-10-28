@@ -1,16 +1,19 @@
 {
   "name": "@dani-isabel/form-component",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "Daniela Bolivar",
   "repository": {
-    "url":"git://github.com/dani-isabel/form-component.git"
+    "url": "git://github.com/dani-isabel/form-component.git"
   },
   "license": "MIT",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/dani-isabel"
+    "registry": "https://npm.pkg.github.com/dani-isabel"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -24,8 +27,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./src --ignore ./node_modules --out-dir dist",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,5 +48,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1"
   }
 }
